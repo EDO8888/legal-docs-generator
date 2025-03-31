@@ -1,0 +1,16 @@
+Legal Warning Letter
+
+Date: {{תאריך}}
+
+To: {{שם הנמען}}
+Address: {{כתובת}}
+
+Subject: Warning before legal action regarding {{נושא}}
+
+According to the agreement signed on {{תאריך_הסכם}}, you are required to pay {{סכום}} NIS by {{תאריך_סופי}}.
+Failure to comply may result in legal action.
+
+Sincerely,
+{{שם השולח}}
+{{תפקיד}}
+{{חתימה}}

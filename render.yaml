@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: legal-docs-api
+    env: python
+    buildCommand: ""
+    startCommand: "python app.py"
+    envVars:
+      - key: EMAIL_USER
+        value: your-email@gmail.com
+      - key: EMAIL_PASS
+        value: your-app-password
