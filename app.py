@@ -29,18 +29,19 @@ def generate():
     template_path = get_template(language, doc_type)
     doc = DocxTemplate(template_path)
 
-    context = {
-        "שם הנמען": data["recipient_name"],
-        "כתובת": data["recipient_address"],
-        "נושא": data["subject"],
-        "תאריך": date.today().strftime("%d/%m/%Y"),
-        "תאריך_הסכם": data["agreement_date"],
-        "סכום": data["amount"],
-        "תאריך_סופי": data["due_date"],
-        "שם השולח": data["sender_name"],
-        "תפקיד": data["sender_role"],
-        "חתימה": data.get("sender_signature", "")
-    }
+context = {
+    "שם הנמען": data["recipient_name"],
+    # "כתובת": data["recipient_address"],  ← להסיר שורה זו
+    "נושא": data["subject"],
+    "תאריך": date.today().strftime("%d/%m/%Y"),
+    "תאריך_הסכם": data["agreement_date"],
+    "סכום": data["amount"],
+    "תאריך_סופי": data["due_date"],
+    "שם השולח": data["sender_name"],
+    "תפקיד": data["sender_role"],
+    "חתימה": data.get("sender_signature", "")
+}
+
 
     os.makedirs("output", exist_ok=True)
     filename_base = f"generated_letter_{date.today()}"
